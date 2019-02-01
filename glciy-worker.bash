@@ -66,7 +66,7 @@ while true ; do
                     --mirror-url https://mirror.spack.io              \
                     --shared-runner-tag spack-k8s                     \
                     --output-file "$tmp/.gitlab-ci.yaml"              \
-                    --this-machine-only                               \
+                    --resolve-deps-locally                            \
                     --print-summary
             )
             code="$?"
