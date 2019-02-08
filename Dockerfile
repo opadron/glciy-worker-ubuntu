@@ -1,9 +1,5 @@
 FROM scottwittenburg/spack_builder_ubuntu_18.04
 
-RUN apt-get -yqq update         \
- && apt-get -yqq install entr   \
- && rm -rf /var/lib/apt/lists/*
-
 RUN RELEASES='https://github.com/Yelp/dumb-init/releases/download' \
  && wget -O /usr/local/bin/dumb-init "$RELEASES/v1.2.2/dumb-init_1.2.2_amd64" \
  && chmod +x /usr/local/bin/dumb-init
